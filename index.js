@@ -8,11 +8,12 @@ client.once('ready', () => {
 
 client.login(process.env.TOKEN);
 
-const wheelz = client.emojis.cache.find(emoji => emoji.name === "wheelz")
+// const wheelz = client.emojis.cache.find(emoji => emoji.name === "wheelz")
 
 client.on('message', message => {
-    if (message.content.includes('wheelz')) {
-        const wheelz = message.guild.emojis.cache.find(emoji => emoji.name === "wheelz")
-        message.channel.send(`THE WHEELZZZZ ${wheelz}`)
+    if (message.content.match(/wheelz/gi) && !(message.author.bot)) {
+        console.log(message.content);
+        const wheelz = client.emojis.cache.find(emoji => emoji.name === "wheelz");
+        message.channel.send(`THE WHEELZZZZ ${wheelz}`);
     }
 })
