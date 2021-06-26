@@ -11,7 +11,7 @@ client.login(process.env.TOKEN);
 const wheelz = client.emojis.cache.find(emoji => emoji.name === "wheelz")
 
 client.on('message', message => {
-    if (message.content === '!wheelz') {
+    if (message.content.includes('wheelz')) {
         message.channel.send(`THE WHEELZZZZ ${wheelz}`)
     }
 })
