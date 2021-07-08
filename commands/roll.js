@@ -4,6 +4,9 @@ module.exports = {
     execute(message, args) {
         if (args[0] == undefined) args[0] = 20;
         const rolled = Math.ceil(Math.random() * args[0])
-        message.channel.send(`You rolled a(n) ${rolled} out of ${args[0]}!`)
+        if ([8,11,18].includes(rolled)) {
+            message.channel.send(`You rolled an ${rolled} out of ${args[0]}!`)
+        }
+        else message.channel.send(`You rolled a ${rolled} out of ${args[0]}!`)
     }
 }
