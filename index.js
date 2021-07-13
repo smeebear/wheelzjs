@@ -19,6 +19,20 @@ client.once('ready', () => {
 
 client.login(process.env.TOKEN);
 
+client.on('voiceStateUpdate', (oldMember, newMember) => {
+    if (newMember.channel !== null && newMember.channel.type === "voice") {
+        // const broadcast = client.voice.createBroadcast();
+        newMember.channel.join()
+        .then(connection => {
+            connection.play('./data/shhh.mp3')
+        });
+        // broadcast.play(ytdl('https://www.youtube.com/watch?v=GJDNkVDGM_s', { filter: 'audioonly' }))
+    }
+    else if (newMember.channel === null) {
+        oldMember.channel.leave();
+    }
+})
+
 client.on('message', message => {
     if (message.author.bot) return;
     if (message.content.match(/wheelz/gi)) {
