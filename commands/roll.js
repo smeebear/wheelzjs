@@ -8,7 +8,14 @@ module.exports = {
             `You seem to be having a lot of feelings right now...`,
             `Do you have a friend that knows a better roller?`,
             `You're like the male Amy Schumer.`,
-            `I bet you'd make a great wingman.`
+            `I bet you'd make a great wingman.`,
+            `Have you ever heard of Rogaine?`,
+            `You remind me of Andy from The Office.`,
+            `Were you homeschooled?`,
+            `You're from Ohio, right? That makes sense.`,
+            `You remind me of James Corden`,
+            `Have you ever left the state?`,
+            `You probably couldn't beat a goose in a fight.`
         ]
 
         const quote = quotes[Math.floor(Math.random() * quotes.length)]
