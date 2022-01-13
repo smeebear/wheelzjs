@@ -13,7 +13,7 @@ module.exports = {
             `You remind me of Andy from The Office.`,
             `Were you homeschooled?`,
             `You're from Ohio, right? That makes sense.`,
-            `You remind me of James Corden`,
+            `You remind me of James Corden.`,
             `Have you ever left the state?`,
             `You probably couldn't beat a goose in a fight.`
         ]
