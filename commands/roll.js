@@ -21,12 +21,13 @@ module.exports = {
         const quote = quotes[Math.floor(Math.random() * quotes.length)]
 
         const rolled = Math.ceil(Math.random() * args[0])
+        if (message.author.username === "Riss") rolled = 1;
         // const rolled = 1;
         if ([8,11,18].includes(rolled)) {
             message.channel.send(`You rolled an ${rolled} out of ${args[0]}!`)
         }
         else if (rolled === 1) {
-            message.channel.send(`You rolled a 1. ${quote}`)
+            message.channel.send(`You rolled a 1 out of ${rolled}. ${quote}`)
         }
         else message.channel.send(`You rolled a ${rolled} out of ${args[0]}!`)
     }
