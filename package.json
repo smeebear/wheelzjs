@@ -6,6 +6,9 @@
   "author": "Sam O'Heron",
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
   "dependencies": {
     "@discordjs/opus": "^0.5.3",
     "discord.js": "^12.5.3",
