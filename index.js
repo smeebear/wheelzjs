@@ -49,6 +49,15 @@ client.on('message', message => {
 
     const args = message.content.slice(prefix.length).trim().split(/ +/);
     const command = args.shift().toLowerCase();
+    if(command === 'swanson') {
+        let quote = "";
+        fetch('https://ron-swanson-quotes.herokuapp.com/v2/quotes')
+            .then(res => res.json())
+            .then(data => {
+                console.log(data[1])
+                return data[1];
+            })
+    }
 
     if (!client.commands.has(command)) return;
 
